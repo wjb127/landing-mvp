@@ -4,7 +4,7 @@ export default function Home() {
   return (
     <LandingTemplate
       logo={{
-        src: "/logo-service.svg",
+        src: "/next.svg",
         alt: "서비스 로고",
         width: 120,
         height: 40,
@@ -12,7 +12,7 @@ export default function Home() {
       title="전문 서비스로 비즈니스의 성장을 가속화하세요"
       subtitle="맞춤형 솔루션으로 귀사의 비즈니스가 한 단계 도약할 수 있도록 지원합니다"
       heroImage={{
-        src: "/hero-service.jpg",
+        src: "/vercel.svg",
         alt: "서비스 이미지",
         width: 600,
         height: 400,
