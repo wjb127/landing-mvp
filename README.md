@@ -32,6 +32,67 @@ npm install
 npm run dev
 ```
 
+## 템플릿을 활용한 새 프로젝트 만들기
+
+이 템플릿을 기반으로 새로운 프로젝트를 만들고 다른 GitHub 저장소에 업로드하는 방법입니다:
+
+### 1. 템플릿 클론하기
+
+```bash
+# 템플릿 저장소를 새 이름으로 클론
+git clone https://github.com/wjb127/landing-mvp.git my-landing-page
+
+# 새 프로젝트 디렉토리로 이동
+cd my-landing-page
+```
+
+### 2. Git 연결 초기화하기
+
+```bash
+# .git 디렉토리 삭제 (기존 Git 히스토리 제거)
+rm -rf .git
+
+# 새 Git 저장소 초기화
+git init
+
+# 모든 파일 스테이징
+git add .
+
+# 첫 커밋 생성
+git commit -m "초기 커밋: 랜딩 페이지 템플릿 기반"
+```
+
+### 3. 새 GitHub 저장소 만들기
+
+1. GitHub 웹사이트에서 새 저장소 생성 (예: `my-project-landing`)
+2. 저장소를 비어있는 상태로 생성 (README, 라이센스 등 추가하지 않음)
+
+### 4. 로컬 저장소를 새 GitHub 저장소에 연결하기
+
+```bash
+# 원격 저장소 연결
+git remote add origin https://github.com/your-username/my-project-landing.git
+
+# 원격 저장소로 푸시
+git push -u origin main  # 또는 master (Git 버전에 따라 다름)
+```
+
+### 5. 템플릿 커스터마이징하기
+
+내용을 프로젝트에 맞게 수정합니다:
+
+- `package.json`의 이름과 버전 업데이트
+- `src/app/components/LandingTemplate.tsx`를 기반으로 내용 커스터마이징
+- 예시 페이지들을 참고하여 필요한 랜딩 페이지 생성
+
+### 6. 변경사항 커밋 및 푸시
+
+```bash
+git add .
+git commit -m "랜딩 페이지 내용 커스터마이징"
+git push
+```
+
 ## 기술 스택
 
 - Next.js
